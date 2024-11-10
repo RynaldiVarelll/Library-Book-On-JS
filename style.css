@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 700px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-container input:focus {
+    box-shadow: 0 0 5px rgba(100, 149, 237, 0.5);
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    animation: fadeInRow 0.5s forwards;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.edit-btn {
+    background-color: #ffa500;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+td button:active {
+    transform: scale(0.9);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRow {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
